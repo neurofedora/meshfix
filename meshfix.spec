@@ -19,6 +19,7 @@ BuildRequires:  gcc-c++
 # contrib/JMeshLib/
 # it's 1.1 version, but somehow modified without any comments
 Provides:       bundled(jmeshlib) = 1.1
+# http://www.cs.cmu.edu/~quake/robust.html
 # contrib/jrs_predicates/jrs_predicates.[ch]
 Provides:       bundled(jrs_predicates)
 BuildRequires:  OpenNL-devel
