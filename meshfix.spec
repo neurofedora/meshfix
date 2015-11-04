@@ -43,6 +43,12 @@ mkdir -p %{buildroot}%{_bindir}
 install -p -m0755 build/%{name} %{buildroot}%{_bindir}
 chrpath -d %{buildroot}%{_bindir}/%{name}
 
+%check
+pushd test
+  sed -i -e 's|\.\./meshfix|%{buildroot}%{_bindir}/%{name}|' *.sh
+  find -name '*.sh' -exec {} ';'
+popd
+
 %files
 %license gpl.txt
 %doc readme.txt
